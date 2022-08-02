@@ -65,7 +65,8 @@ function getRandomInt(min, max) {
 
 // Fonction appelée si le résultat du dé est 1
 function currentScoreLose() {
-  currentText.textContent = loseScore;
+  document.getElementById('currentScore').innerHTML = "CURRENT : " + 0;
+  document.getElementById('currentScore2').innerHTML = "CURRENT : " + 0;
   current = 0;
   alert ('vous avez fait 1 vous devais passer votre tour');
 }
@@ -79,7 +80,9 @@ function rollDice() {
       switchPlayer();
     } else {
       current += randomNumber;
-      currentText.textContent = current;
+      //currentText.textContent = current;
+      document.getElementById('currentScore').innerHTML = "CURRENT : " + current;
+      document.getElementById('currentScore2').innerHTML = "CURRENT : " + current;
     }
   }, 500)
 }
