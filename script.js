@@ -14,8 +14,19 @@ let reserved = reserveScore;
 const roll = document.getElementById("roll");
 const hold = document.getElementById("hold");
 const dice = document.getElementById("dice");
-const newGameFunction = document.getElementById("newgame");
+const logoplus = document.getElementById("logoplus");
 
+// fonction remise à zero 
+function newGame(){
+  currentText.textContent = 0;
+  reserveText.textContent = 0;
+  current = 0;
+  reserved = 0;
+  document.getElementById("currentScore").textContent = 0;
+  document.getElementById("reserveScore").textContent = 0;
+  document.getElementById("currentScore2").textContent = 0;
+  document.getElementById("reserveScore2").textContent = 0;
+}
 
 // fonction pour le changement de joueur
 function switchPlayer() {
@@ -89,6 +100,7 @@ function reserve() {
 roll.addEventListener("click", rollDice);
 hold.addEventListener("click", reserve);
 roll.addEventListener("click",diceOne);
+logoplus.addEventListener("click",newGame);
 
 // -------------------------------------------------------- //
 // Fonction déplacement du dé
