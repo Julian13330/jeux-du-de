@@ -41,14 +41,14 @@ function switchPlayer() {
   case 'player 1': {
     currentText = document.getElementById("currentScore");
     reserveText = document.getElementById("reserveScore");
-    current = currentScore;
+    current = parseInt(currentText.innerHTML);
     reserved = parseInt(reserveText.innerHTML);
     break;
   }
   case 'player 2': {
     currentText = document.getElementById("currentScore2");
     reserveText = document.getElementById("reserveScore2");
-    current = currentScore;
+    current = parseInt(currentText.innerHTML);
     reserved = parseInt(reserveText.innerHTML);
     break;
   }
@@ -65,8 +65,7 @@ function getRandomInt(min, max) {
 
 // Fonction appelée si le résultat du dé est 1
 function currentScoreLose() {
-  document.getElementById('currentScore').innerHTML = "CURRENT : " + 0;
-  document.getElementById('currentScore2').innerHTML = "CURRENT : " + 0;
+  currentText.textContent = 0;
   current = 0;
   alert ('vous avez fait 1 vous devais passer votre tour');
 }
@@ -80,9 +79,7 @@ function rollDice() {
       switchPlayer();
     } else {
       current += randomNumber;
-      //currentText.textContent = current;
-      document.getElementById('currentScore').innerHTML = "CURRENT : " + current;
-      document.getElementById('currentScore2').innerHTML = "CURRENT : " + current;
+      currentText.textContent = current;
     }
   }, 500)
 }
@@ -91,12 +88,12 @@ function rollDice() {
 function reserve() {
   reserved += current;
   reserveText.textContent = reserved;
+  currentText.textContent = 0;
   if (reserved >=100){
     alert(`${activePlayer}: vous avez remporté le match !!!!`)
   }
   switchPlayer();
-  document.getElementById('currentScore').innerHTML = "CURRENT : " + 0;
-  document.getElementById('currentScore2').innerHTML = "CURRENT : " + 0;
+
 }
 
 // Appelle des fonctions avec un listener
