@@ -1,0 +1,46 @@
+body {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#bloc {
+    height: 500px;
+}
+#logoplus {
+    position: relative;
+    bottom: -10px;
+    left: -4px;
+    color: red;
+}
+#rollDice {
+    position: relative;
+    color: red;
+    left: -20px;
+    bottom: -22px;
+
+}
+#hold {
+    position: relative;
+    color: red;
+    left: -4px;
+    bottom: -2px;
+}
+#newGame {
+    height: 70px;
+}
+#reset {
+    position: relative;
+    color: red;
+    left: -4px;
+    bottom: -2px;
+}
+#joueur1 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+#joueur2 {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
