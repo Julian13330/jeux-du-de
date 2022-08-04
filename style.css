@@ -1,10 +1,16 @@
 body {
     margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(49, 49, 49);
+    font-family: cursive;
 }
 #bloc {
-    height: 500px;
+    height: 600px;
+    min-height: 50vh;
+    background-position: center;
+    background-image: url("photos/arrièreplan\ jeu\ de.png");
+    border-radius: 10px;
 }
 #logoplus {
     position: relative;
@@ -43,4 +49,8 @@ body {
     position: absolute;
     right: 0px;
     top: 0px;
+}
+#reserve {
+    color: red;
+    font-size: 50px;
 }
